@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>LiGodv</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-01-21T12:27:59.912Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>LiGodv</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL安装教程</title>
+    <link href="http://example.com/2021/01/21/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <id>http://example.com/2021/01/21/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</id>
+    <published>2021-01-21T12:05:30.000Z</published>
+    <updated>2021-01-21T12:27:59.912Z</updated>
+    
+    <content type="html"><![CDATA[<p> 这篇博客用来记录安装压缩版MySQL的教程，便于查看。</p><a id="more"></a><h3 id="一、下载MySQL"><a href="#一、下载MySQL" class="headerlink" title="一、下载MySQL"></a><strong>一、下载MySQL</strong></h3><h4 id="1-1-到官网下载"><a href="#1-1-到官网下载" class="headerlink" title="1.1 到官网下载"></a>1.1 到官网下载</h4><p>网址是<a href="https://dev.mysql.com/downloads/mysql/">https://dev.mysql.com/downloads/mysql/</a> 点击download进行下载，并解压到任意目录</p><p><img src="/2021/01/21/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210121202758618.png" alt="image-20210121202758618"></p><h3 id="二、配置环境变量"><a href="#二、配置环境变量" class="headerlink" title="二、配置环境变量"></a><strong>二、配置环境变量</strong></h3><p>此电脑–&gt;右键–&gt;属性–&gt;高级系统设置–&gt;环境变量–&gt;系统变量–&gt;Path–&gt;编辑–&gt;新建–&gt;填入“E:\software\MySQL\bin”–&gt;确认</p><p><img src="/2021/01/21/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210121202443333.png" alt="image-20210121202443333"></p><p><img src="/2021/01/21/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210121202516870.png" alt="image-20210121202516870"></p><p><img src="/2021/01/21/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210121202526443.png" alt="image-20210121202526443"></p><p><img src="/2021/01/21/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210121202540847.png" alt="image-20210121202540847"></p><h3 id="三、新建配置文件文件"><a href="#三、新建配置文件文件" class="headerlink" title="三、新建配置文件文件"></a><strong>三、新建配置文件文件</strong></h3><h4 id="3-1在mysql的解压目录新建my-ini文件"><a href="#3-1在mysql的解压目录新建my-ini文件" class="headerlink" title="3.1在mysql的解压目录新建my.ini文件"></a>3.1在mysql的解压目录新建my.ini文件</h4><p><img src="/2021/01/21/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210121202551359.png" alt="image-20210121202551359"> </p><p>内容如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[mysql]</span><br><span class="line"># 设置mysql客户端默认字符集</span><br><span class="line">default-character-set&#x3D;utf8</span><br><span class="line">[mysqld]</span><br><span class="line">#设置3306端口</span><br><span class="line">port &#x3D; 3306</span><br><span class="line"># 设置mysql的安装目录 改为自己的安装目录</span><br><span class="line">basedir&#x3D;E:&#x2F;software&#x2F;MySQL</span><br><span class="line"># 设置mysql数据库的数据的存放目录</span><br><span class="line">datadir&#x3D;E:&#x2F;software&#x2F;MySQL&#x2F;data</span><br><span class="line"># 允许最大连接数</span><br><span class="line">max_connections&#x3D;200</span><br><span class="line"># 服务端使用的字符集默认为8比特编码的latin1字符集</span><br><span class="line">character-set-server&#x3D;utf8</span><br><span class="line"># 创建新表时将使用的默认存储引擎</span><br><span class="line">default-storage-engine&#x3D;INNODB</span><br></pre></td></tr></table></figure><h3 id="四、配置服务并启动"><a href="#四、配置服务并启动" class="headerlink" title="四、配置服务并启动"></a><strong>四、配置服务并启动</strong></h3><p>使用管理员身份运行CMD，并进入到mysql的安装目录的bin文件夹</p><p><img src="/2021/01/21/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210121202605823.png" alt="image-20210121202605823"></p><h4 id="安装MySQL服务"><a href="#安装MySQL服务" class="headerlink" title="安装MySQL服务"></a>安装MySQL服务</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld install</span><br></pre></td></tr></table></figure><h4 id="初始化MySQL"><a href="#初始化MySQL" class="headerlink" title="初始化MySQL"></a>初始化MySQL</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize</span><br></pre></td></tr></table></figure><h4 id="开启服务"><a href="#开启服务" class="headerlink" title="开启服务"></a>开启服务</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net start mysql</span><br></pre></td></tr></table></figure><h3 id><a href="#" class="headerlink" title></a><img src="/2021/01/21/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210121202622141.png" alt="image-20210121202622141"></h3><h3 id="五、查找初始密码"><a href="#五、查找初始密码" class="headerlink" title="五、查找初始密码"></a><strong>五、查找初始密码</strong></h3><p>打开MySQL的数据目录下面的.err文件，数据目录是在my.ini文件中配置的</p><p><img src="/2021/01/21/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210121202637293.png" alt="image-20210121202637293"> </p><p>篮框部分就是密码</p><h3 id="-1"><a href="#-1" class="headerlink" title></a><img src="/2021/01/21/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210121202645679.png" alt="image-20210121202645679"></h3><h3 id="六、修改初始密码"><a href="#六、修改初始密码" class="headerlink" title="六、修改初始密码"></a><strong>六、修改初始密码</strong></h3><h4 id="6-1-普通修改方式"><a href="#6-1-普通修改方式" class="headerlink" title="6.1 普通修改方式"></a>6.1 普通修改方式</h4><p>在cmd输入 <strong>mysql -u root -p</strong> 按回车，输入刚刚的初始密码</p><p>输入修改密码命令 <strong>set password for root@localhost = password(‘root’);</strong> </p><h4 id="-2"><a href="#-2" class="headerlink" title></a><img src="/2021/01/21/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210121202658784.png" alt="image-20210121202658784"></h4><h4 id="6-2使用第三方工具修改"><a href="#6-2使用第三方工具修改" class="headerlink" title="6.2使用第三方工具修改"></a>6.2使用第三方工具修改</h4><p>例如navicat等</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt; 这篇博客用来记录安装压缩版MySQL的教程，便于查看。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+</feed>
