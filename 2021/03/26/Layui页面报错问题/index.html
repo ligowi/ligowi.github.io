@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: 教程 | LGodv</title>
+  <title>问题 | LGodv</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="LGodv">
-<meta property="og:url" content="http://example.com/tags/%E6%95%99%E7%A8%8B/index.html">
+  <meta name="description" content="今天使用Layui渲染页面的时，想要在input标签上添加表单校验，在input添加了lay-verify&#x3D;”required”后出现了BUG。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="问题">
+<meta property="og:url" content="http://example.com/2021/03/26/Layui%E9%A1%B5%E9%9D%A2%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="LGodv">
+<meta property="og:description" content="今天使用Layui渲染页面的时，想要在input标签上添加表单校验，在input添加了lay-verify&#x3D;”required”后出现了BUG。">
 <meta property="og:locale">
+<meta property="og:image" content="http://example.com/2021/03/26/Layui%E9%A1%B5%E9%9D%A2%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/image-20210326172236678.png">
+<meta property="article:published_time" content="2021-03-26T09:20:20.000Z">
+<meta property="article:modified_time" content="2021-03-26T09:24:21.376Z">
 <meta property="article:author" content="LGodv">
+<meta property="article:tag" content="Layui">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/03/26/Layui%E9%A1%B5%E9%9D%A2%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/image-20210326172236678.png">
   
     <link rel="alternative" href="/atom.xml" title="LGodv" type="application/atom+xml">
   
@@ -128,65 +135,211 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="layui报attribute-Layui页面报错问题" class="article article-type-layui报attribute " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2021/01/21/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" class="archive-article-date">
-        <time datetime="2021-01-21T12:05:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-21</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2021/01/21/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" target="_blank">MySQL安装教程</a>
   
+    <h1 class="article-title" itemprop="name">
+      问题
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2021/03/26/Layui%E9%A1%B5%E9%9D%A2%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/" class="archive-article-date">
+        <time datetime="2021-03-26T09:20:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-26</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">83字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>今天使用Layui渲染页面的时，想要在input标签上添加表单校验，在input添加了lay-verify=”required”后出现了BUG。</p>
+<a id="more"></a>
+
+<p>系统报错如下图</p>
+<p><img src="/2021/03/26/Layui%E9%A1%B5%E9%9D%A2%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/image-20210326172236678.png" alt="image-20210326172236678"></p>
+<p>通过(Line = 14, Column = 98) Malformed markup: Attribute “lay-verify” appears more than once in element分析：</p>
+<p>Bug应该是lay-verify=””字段重复，将lay-verify=””字段删除掉一个即可！</p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          LGodv
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://example.com/2021/03/26/Layui页面报错问题/" title="问题" target="_blank">http://example.com/2021/03/26/Layui页面报错问题/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Layui</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2021/06/04/redis%E5%AF%86%E7%A0%81%E6%97%A0%E6%95%88%E9%97%AE%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          redis密码无效问题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/03/21/layui%E8%A1%A8%E6%A0%BC%E5%8A%A8%E6%80%81%E6%B8%B2%E6%9F%93%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">layui表格动态渲染问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -225,9 +378,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
@@ -313,7 +466,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">教程</a>
+                <a href="javascript:void(0)" class="js-tag color1">Layui</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">
